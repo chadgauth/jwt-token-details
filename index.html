@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JWT Token Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="p-5">
+    <div class="max-w-md mx-auto bg-white p-5 rounded-md shadow-sm">
+        <h2 class="text-2xl mb-5 text-center">Enter JWT Token</h2>
+        <input type="text" id="token" class="w-full p-2 mb-3 border rounded-md" placeholder="JWT Token">
+        <button id="submit" class="w-full p-2 bg-blue-500 text-white rounded-md">Get Token Details</button>
+        <pre id="result" class="mt-5 p-3 bg-gray-100 rounded-md overflow-auto w-full max-w-full"></pre>
+    </div>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', function() {
+            var token = document.getElementById('token').value;
+            fetch('http://localhost:3000/tokenDetails', {
+                headers: {
+                    'x-access-token': token
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

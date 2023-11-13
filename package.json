@@ -1,0 +1,25 @@
+{
+  "name": "jwt-token-details",
+  "version": "1.0.0",
+  "description": "A node app that allows me to print out JWT token details and verify signatures",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "jwt",
+    "node",
+    "jsonwebtoken",
+    "dotenv",
+    "express"
+  ],
+  "author": "Chad Gauthier",
+  "license": "ISC"
+}
