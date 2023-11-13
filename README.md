@@ -6,7 +6,7 @@ Today, I developed a simple yet functional Node.js application that decodes JWT 
 
 This application provides a user-friendly interface to input JWT tokens and get their decoded details. It also verifies the signatures of the tokens.
 
-![Application Screenshot](screen.png)
+![Application Screenshot](./images/screen.png)
 
 ## Setup and Installation
 
